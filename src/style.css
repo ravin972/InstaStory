@@ -21,12 +21,23 @@ body {
 }
 
 .cards {
+    position: relative;
     height: 75vh;
     width: 50vh;
     overflow: hidden;
     border: .5px solid #000;
     border-radius: .5rem;
     background-color: #f5f5f7;
+}
+
+
+#fullPage-story {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
 }
 
 .stories {
@@ -40,9 +51,29 @@ body {
     white-space: nowrap;
 }
 
-.stories::-webkit-scrollbar{
-    display: none;
+/* Width of the scrollbar */
+.stories::-webkit-scrollbar {
+    /* width: 0.4rem; */
+    height: 0.4rem;
+    /* display: none; */
 }
+
+/* Track (the area behind the thumb) */
+.stories::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* The scrollbar itself (the thumb) */
+.stories::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 50px;
+}
+
+/* On hover, style the scrollbar */
+.stories::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 
 .circle {
     display: inline-block;
@@ -51,8 +82,10 @@ body {
     border-radius: 50%;
     padding: .25rem;
     background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    margin-right: .4rem;
 }
-.circle img{
+
+.circle img {
     height: 100%;
     width: 100%;
     border-radius: 50%;
